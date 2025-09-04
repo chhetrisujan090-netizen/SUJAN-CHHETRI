@@ -47,4 +47,7 @@ variable = stds[stds == stds.max()]
 with open("temperature_stability_stations.txt", "w") as f:
     for st, v in stable.items():
         f.write(f"Most Stable: {st}: StdDev {v:.1f}°C\n")
-    f
+    for st, v in variable.items():
+        f.write(f"Most Variable: {st}: StdDev {v:.1f}°C\n")
+
+print("Done! 3 files created.")
