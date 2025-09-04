@@ -41,8 +41,6 @@ winners = station_stats[station_stats["range"] == max_range]
 with open("largest_temp_range_station.txt", "w") as f:
     for st, row in winners.iterrows():
         f.write(f"{st}: Range {row['range']:.1f}°C (Max {row['max']:.1f}°C, Min {row['min']:.1f}°C)\n")
-
-# --- Temperature stability (std deviation) ---
 stds = df.groupby("station")["temp"].std()
 most_stable = stds[stds == stds.min()]
 most_variable = stds[stds == stds.max()]
