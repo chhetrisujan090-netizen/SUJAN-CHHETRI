@@ -1,4 +1,3 @@
-
 # q3_turtle_pattern.py
 import turtle
 
@@ -29,5 +28,3 @@ if __name__ == "__main__":
     screen.setup(width=800, height=800)
     t = turtle.Turtle()
     t.speed("fastest")
-    draw_polygon(t, sides, length, depth)
-    turtle.done()
