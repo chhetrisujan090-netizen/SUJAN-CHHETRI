@@ -27,9 +27,3 @@ draw(t,length,depth)
 
 t.right(360/sides)
 turtle.done()
-
-
-
-
-
-
